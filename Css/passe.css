@@ -1,0 +1,90 @@
+body{
+    font-family: sans-serif,tahoma;
+    margin:0;
+    padding:0;
+    color: rgb(114, 143, 148);
+}
+*{
+    box-sizing:border-box;
+}
+header nav{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 40px 0px 40px;
+}
+/* .mode-container{
+    background-color: red;
+} */
+.mode-container input{
+    display: none;
+}
+.mode-container label{
+    /* background-color: black; */
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-areas:"btn label";
+    grid-area:label;
+}
+.mode-container label:before{
+    content: "";
+    display: block;
+    width:40px;
+    height: 20px;
+    background-color: rgb(50, 119, 146);
+    grid-area:btn;
+    border-radius:50px;
+}
+.mode-container label:after{
+    content: "";
+    display: block;
+    width:20px;
+    height: 20px;
+    background-color: black;
+    grid-area:btn;
+    border-radius:50px;
+}
+.mode-container input:checked +.text::after{
+    transform:translateX(20px);
+    background-color: white;
+}
+.dark{
+    background-color: black;
+    color:rgb(246, 253, 253);
+}
+/* .container{
+    width:70%;
+    margin:20px auto;
+} */
+.social-media-follower{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px 20px;
+    /* background-color: red; */
+}
+.social-media-follower .card-media{
+    width:150px;
+    background-color:rgba(114, 143, 148, 0.342) ;
+    padding:10px;
+    text-align: center;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+.socialName{
+    background-color: rgba(114, 143, 148, 0.637);
+    position:absolute;
+    bottom: 0;
+    left:0;
+    right:0;
+    padding:5px;
+    color:rgb(58, 85, 92);
+    font-weight: bold;
+}
+main{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
